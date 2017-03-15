@@ -829,7 +829,7 @@ namespace Microsoft.VisualStudio.Services.Agent.Tests
         [Fact]
         [Trait("Level", "L0")]
         [Trait("Category", nameof(CommandSettings))]
-        public void DeploymentGrouNameBackCompat()
+        public void DeploymentGroupNameBackCompat()
         {
             using (TestHostContext hc = CreateTestContext())
             {
@@ -856,7 +856,7 @@ namespace Microsoft.VisualStudio.Services.Agent.Tests
                 // Validate if --machinegroupname parameter is working
                 Assert.Equal("Test-MachineGroupName", actual);
                 
-                // Validate Read Value should not get envoked.
+                // Validate Read Value should not get invoked.
                 _promptManager.Verify(x =>
                     x.ReadValue(It.IsAny<string>(), It.IsAny<string>(),
                         It.IsAny<bool>(), It.IsAny<string>(), It.IsAny<Func<string, bool>>(), It.IsAny<bool>()), Times.Never);
@@ -866,7 +866,7 @@ namespace Microsoft.VisualStudio.Services.Agent.Tests
         [Fact]
         [Trait("Level", "L0")]
         [Trait("Category", nameof(CommandSettings))]
-        public void PromptsForDeploymentGrouTags()
+        public void PromptsForDeploymentGroupTags()
         {
             using (TestHostContext hc = CreateTestContext())
             {
@@ -893,7 +893,7 @@ namespace Microsoft.VisualStudio.Services.Agent.Tests
         [Fact]
         [Trait("Level", "L0")]
         [Trait("Category", nameof(CommandSettings))]
-        public void DeploymentGrouTagsBackCompat()
+        public void DeploymentGroupTagsBackCompat()
         {
             using (TestHostContext hc = CreateTestContext())
             {
@@ -920,7 +920,7 @@ namespace Microsoft.VisualStudio.Services.Agent.Tests
                 // Validate if --machinegrouptags parameter is working fine
                 Assert.Equal("Test-MachineGrouptag1,Test-MachineGrouptag2", actual);
                 
-                // Validate Read Value should not get envoked.
+                // Validate Read Value should not get invoked.
                 _promptManager.Verify(x =>
                     x.ReadValue(It.IsAny<string>(), It.IsAny<string>(),
                         It.IsAny<bool>(),It.IsAny<string>(), It.IsAny<Func<string,bool>>(),It.IsAny<bool>()), Times.Never);
